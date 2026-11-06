@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-card: #0d0e11;
+  --color-card-foreground: #ffffff;
+  --color-muted: #16171a;
+  --color-muted-foreground: #a1a1aa;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-destructive: #ef4444;
+}
+
+@layer base {
+  :root, .dark {
+    --background: #000000;
+    --foreground: #ffffff;
+    --card: #0d0e11;
+    --card-foreground: #ffffff;
+    --muted: #16171a;
+    --muted-foreground: #a1a1aa;
+    --border: rgba(255, 255, 255, 0.1);
+    --destructive: #ef4444;
+    --brand-accent-val: 215 100% 50%;
+  }
+
+  html, body {
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100%;
+  }
+
+  ::selection {
+    background-color: hsl(var(--brand-accent, 215 100% 50%) / 0.25);
+    color: currentColor;
+  }
+}
+
+@keyframes btn-flash {
+  0% {
+    transform: translateX(-160%) skewX(-25deg);
+  }
+  30%, 100% {
+    transform: translateX(260%) skewX(-25deg);
+  }
+}
+
+.animate-btn-flash {
+  animation: btn-flash 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}

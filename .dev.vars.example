@@ -1,0 +1,5 @@
+# Copy this file to .dev.vars for local Wrangler development only.
+ENVIRONMENT=development
+LOCAL_ADMIN_BYPASS=true
+CF_ACCESS_TEAM_DOMAIN=
+CF_ACCESS_AUD=
